@@ -1,0 +1,5 @@
+type Main = 
+ service {
+   greet: (text) -> (text) query;
+ };
+service : () -> Main

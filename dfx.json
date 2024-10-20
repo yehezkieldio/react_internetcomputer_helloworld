@@ -1,0 +1,32 @@
+{
+    "canisters": {
+        "backend": {
+            "type": "motoko",
+            "main": "icp/Main.mo",
+            "declarations": {
+                "node_compatibility": true,
+                "output": "src/icp"
+            }
+        },
+        "frontend": {
+            "dependencies": ["backend"],
+            "frontend": {
+                "entrypoint": "dist/index.html"
+            },
+            "declarations": {
+                "node_compatibility": true,
+                "output": "src/icp"
+            },
+            "source": ["dist"],
+            "type": "assets"
+        }
+    },
+    "defaults": {
+        "build": {
+            "args": "",
+            "packtool": "mops sources"
+        }
+    },
+    "output_env_file": ".env",
+    "version": 2
+}
